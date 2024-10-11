@@ -1,0 +1,48 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.portafolio_1;
+import javax.swing.JOptionPane;
+/**
+ *
+ * @author Conej
+ */
+public class Portafolio1_2 extends Portafolio_1 {
+    public static void main(String[] args) {
+        double Propiedad = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite el valor de la propiedad inmueble"));
+        double Meses = 6000;
+        
+        if (Propiedad < 1000000) {
+            double impuestos = 0.08;
+            double calc = Propiedad *impuestos;
+            double Monto_Morosidad = calc + Meses * (0.01 /100);
+            double Total = Monto_Morosidad + Propiedad;
+            JOptionPane.showMessageDialog(null,"el valor de la propiedad es: "+Propiedad );
+            JOptionPane.showMessageDialog(null,"Los impuestos con el 0.08  son: "+Monto_Morosidad);
+            JOptionPane.showMessageDialog(null,"el monto total es: "+Total );
+        } 
+        else {
+            if (Propiedad <= 10000000 && Propiedad >= 1000000){
+            double impuestos = 0.10;
+            double calc = Propiedad *impuestos;
+            double Monto_Morosidad = calc + Meses * (0.01 /100);
+            double Total = Monto_Morosidad + Propiedad;
+            JOptionPane.showMessageDialog(null,"el valor de la propiedad es: "+Propiedad );
+            JOptionPane.showMessageDialog(null,"Los impuestos con el 0.10 son: "+Monto_Morosidad);
+            JOptionPane.showMessageDialog(null,"el monto total es: "+Total );
+            }
+            else {
+                if (Propiedad > 10000000){
+                    double impuestos = 0.10;
+                    double calc = Propiedad *impuestos;
+                    double Monto_Morosidad = calc + Meses * (0.01 /100);
+                    double Total = Monto_Morosidad + Propiedad;
+                    JOptionPane.showMessageDialog(null,"el valor de la propiedad es: "+Propiedad );
+                    JOptionPane.showMessageDialog(null,"Los impuestos con el 0.15 son: "+Monto_Morosidad);
+                    JOptionPane.showMessageDialog(null,"el monto total es: "+Total );
+                }
+            }
+        }  
+    }
+}
